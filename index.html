@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Wishes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-audio" loop>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    
+    <div class="container" onclick="playAudio()">
+        <div class="card">
+            <div class="outside">
+                <h1>Happy Birthday</h1>
+                <h3>
+                    My dear best friend, may God bless you with abundant joy on your birthday and always!<br>
+                    Thank you for always being by my side and having my back.
+                </h3>
+            </div>
+            <div class="inside">
+                <img src="cakegif.gif" alt="Birthday Cake"/>
+                <h3>
+                    A strong,gorgeous and pretty girl , may God bless you with abundant joy on your birthday and always!<br>
+                    Always be healthy and remember that i told you to wait in future whatever the situation i will find you!!.
+                    <p>Sending you an infinite amount of love, joy, and happiness on your birthday!</p>
+                </h3>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="frames frame1">
+                <img src="image1.jpg" alt="Frame 1">
+                <p>Keep smiling, Keep shining</p>
+            </div>
+            <div class="frames frame2">
+                <img src="image8.jpg" alt="Frame 2">
+                <p>On this occasion, bring you a lot of happiness and success</p>
+            </div>
+            <div class="frames frame3">
+                <img src="image5.jpg" alt="Frame 3">
+                <p>May God bless you on your birthday, and always</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('background-audio');
+            audio.play().catch(function(error) {
+                console.log("Audio playback failed: " + error);
+            });
+        }
+
+        // Try to play audio on page load
+        window.onload = function() {
+            playAudio();
+        };
+
+        // Also enable audio on touch for mobile
+        document.addEventListener('touchstart', playAudio, { once: true });
+    </script>
+</body>
+</html>
